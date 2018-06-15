@@ -6,6 +6,7 @@ var t_sum = t1 + t2;
 hour = Math.floor(t_sum/3600);
 min = Math.floor((t_sum%3600)/60);
 sec = t_sum%60;
+if (t_sum !== 0){
 if (hour > 0) {
 	if ((hour%10) === 1) {time_result+=hour+' час ';}
 	else if (((hour%10) > 1)&&((hour%10) < 5)) {time_result+=hour+' часа ';}
@@ -21,3 +22,4 @@ if (min > 0) {
 	else {time_result+=sec+' секунд';}
 
 process.stdout.write(time_result);
+}
